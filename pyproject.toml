@@ -1,0 +1,27 @@
+[project]
+name = "llm-huggingface-remote"
+version = "0.1"
+description = "LLM plugin for running models using the Huggingface text-generation-inference API, either run locally or on their service"
+readme = "README.md"
+authors = [{name = "Jonas Blahut"}]
+license = {text = "Apache-2.0"}
+classifiers = [
+    "License :: OSI Approved :: Apache Software License"
+]
+dependencies = [
+    "llm",
+    "httpx",
+    "text-generation"
+]
+
+[project.urls]
+Homepage = "https://github.com/darkphoenix/llm-huggingface-remote"
+Changelog = "https://github.com/darkphoenix/llm-huggingface-remote/releases"
+Issues = "https://github.com/darkphoenix/llm-huggingface-remote/issues"
+CI = "https://github.com/darkphoenix/llm-huggingface-remote/actions"
+
+[project.entry-points.llm]
+huggingface_remote = "llm_huggingface_remote"
+
+[project.optional-dependencies]
+test = ["pytest"]
